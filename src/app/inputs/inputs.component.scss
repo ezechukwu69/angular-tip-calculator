@@ -1,6 +1,8 @@
 .title {
   margin-bottom: 8px;
   margin-top: 20px;
+  color: var(--dark-grayish-cyan-lighter);
+  font-size: 14px;
 }
 
 .percentage-button {
@@ -52,7 +54,7 @@
 .container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: repeat(2, 50px);
+  grid-template-rows: repeat(2, 30px);
   column-gap: 10px;
   row-gap: 10px;
 }
