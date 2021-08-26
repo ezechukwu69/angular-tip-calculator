@@ -17,7 +17,7 @@ import { CalculatorService } from './services/calculator.service';
     AppSummaryComponent,
     InputsComponent,
     SummaryTitleComponent,
-    RightAlignTextComponent
+    RightAlignTextComponent,
   ],
   imports: [
     BrowserModule,
