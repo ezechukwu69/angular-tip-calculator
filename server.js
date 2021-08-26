@@ -13,7 +13,7 @@ app.use(requireHTTPS);
 
 app.use(express.static("dist"));
 
-app.get("/", function (req, res) {
+app.get("/*", function (req, res) {
   console.log("Getting file");
   res.sendFile("index.html", { root: "dist/" });
 });
