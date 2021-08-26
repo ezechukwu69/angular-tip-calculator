@@ -6,6 +6,8 @@ import { RightAlignTextComponent } from './components/right-align-text/right-ali
 import { SummaryTitleComponent } from './components/summary-title/summary-title.component';
 import { InputsComponent } from './inputs/inputs.component';
 import { CalculatorService } from './services/calculator.service';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 
 @NgModule({
@@ -17,7 +19,13 @@ import { CalculatorService } from './services/calculator.service';
     RightAlignTextComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: environment.production,
+      // Register the ServiceWorker as soon as the app is stable
+      // or after 30 seconds (whichever comes first).
+      registrationStrategy: 'registerWhenStable:30000'
+    })
   ],
   providers: [
     CalculatorService
