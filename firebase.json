@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dist/tip-calculator",
+    "public": "dist",
     "ignore": [
       "firebase.json",
       "**/.*",
