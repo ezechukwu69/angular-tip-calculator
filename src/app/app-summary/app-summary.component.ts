@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { CalculatorService } from '../services/calculator.service';
 
 @Component({
@@ -6,12 +6,18 @@ import { CalculatorService } from '../services/calculator.service';
   templateUrl: './app-summary.component.html',
   styleUrls: ['./app-summary.component.scss']
 })
-export class AppSummaryComponent implements OnInit {
+export class AppSummaryComponent implements OnInit, AfterViewInit{
 
   constructor(private calculator: CalculatorService) { }
 
+  animationDisabled = true
+
   tipAmount = `0.00`
   total = `0.00`
+
+  ngAfterViewInit(): void {
+    this.animationDisabled = false
+  }
 
   ngOnInit(): void {
     this.calculator.tipAmountPerPersonSubject.subscribe(e => this.tipAmount = e)
