@@ -1,0 +1,17 @@
+<p class="title">
+    Bill
+</p>
+<app-right-align-text [value]="bill" (onChanged)="onBillChanged($event)"></app-right-align-text>
+<p class="title">
+    Select Tip %
+</p>
+<div class="container">
+    <div class="controls" *ngFor="let percentage of percentages">
+        <button class="percentage-button" [ngClass]="{'active': selectedPercentage == percentage}" (click)="onPercentageSet(percentage)">{{percentage}}%</button>
+    </div>
+    <input type="number" #value class="controls-input" placeholder="Custom" min="1" (keyup)="onPercentageSet(+value.value)">
+</div>
+<p class="title">
+    Number of people
+</p>
+<app-right-align-text [value]="persons" (onChanged)="onPersonCountChanged($event)"></app-right-align-text>

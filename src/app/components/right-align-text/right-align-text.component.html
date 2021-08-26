@@ -1,0 +1,7 @@
+<section class="container">
+    <div class="inputs">
+            <input type="number" #inputValue name="bill" class="field" (keyup)="onChangeValue(inputValue)" placeholder="0" [value]="value" min="1" step="any" required>
+            <p class="error-text">Can't be zero</p>
+    </div>
+    <img src="assets/icon-dollar.svg" alt="icons" srcset="" class="icon">
+</section>

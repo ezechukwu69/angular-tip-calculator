@@ -1,0 +1,32 @@
+.title {
+  line-height: 40px;
+  &__header {
+    line-height: 20px;
+    font-size: 0.9rem;
+    color: #fff;
+  }
+
+  &__subscript {
+    line-height: 20px;
+    font-size: 0.7rem;
+    color: rgba($color: #fff, $alpha: 0.6);
+  }
+}
+
+.container {
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+  align-items: center;
+  .amount {
+    font-size: 2em;
+    color: var(--strong-cyan);
+    font-weight: 700;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .container .amount {
+    font-size: 1.6em;
+  }
+}

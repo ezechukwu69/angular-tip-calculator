@@ -1,1 +1,34 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+
 /* You can add global styles to this file, and also import other style files */
+:root {
+  --very-dark-cyan: hsl(183, 100%, 15%);
+  --dark-grayish-cyan-lighter: hsl(186, 14%, 43%);
+  --dark-grayish-cyan: hsl(184, 14%, 56%);
+  --light-grayish-cyan-lighter: hsl(185, 41%, 84%);
+  --light-grayish-cyan: hsl(189, 41%, 97%);
+  --white: hsl(0, 0%, 100%);
+  --strong-cyan: hsl(172, 67%, 45%);
+}
+
+* {
+  font-family: "Space Mono", monospace;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: var(--light-grayish-cyan-lighter);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
