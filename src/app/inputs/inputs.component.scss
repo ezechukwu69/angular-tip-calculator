@@ -31,6 +31,17 @@
   padding-right: 8px;
   background-color: var(--light-grayish-cyan);
   text-align: right;
+
+  &:focus:valid {
+    outline: none;
+    border: 2px solid var(--strong-cyan);
+  }
+
+  &:focus:invalid {
+    outline: none;
+    border: 2px solid darkorange;
+  }
+
   &::placeholder {
     font-size: 20px;
     font-weight: 500;

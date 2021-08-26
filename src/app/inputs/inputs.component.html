@@ -9,7 +9,7 @@
     <div class="controls" *ngFor="let percentage of percentages">
         <button class="percentage-button" [ngClass]="{'active': selectedPercentage == percentage}" (click)="onPercentageSet(percentage)">{{percentage}}%</button>
     </div>
-    <input type="number" #value class="controls-input" placeholder="Custom" min="1" (keyup)="onPercentageSet(+value.value)">
+    <input type="number" #value class="controls-input" placeholder="Custom" min="1" required (keyup)="onPercentageSet(+value.value)">
 </div>
 <p class="title">
     Number of people
