@@ -1,6 +1,6 @@
 {
-  "name": "tip-calculator",
-  "short_name": "tip-calculator",
+  "name": "Tip Calculator",
+  "short_name": "Tip",
   "theme_color": "#1976d2",
   "background_color": "#fafafa",
   "display": "standalone",
